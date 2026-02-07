@@ -2,14 +2,23 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>画师个人展示页</title>
+    <title>铁锅铲</title>
+
+    <!-- 主样式 -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- 禁用右键 -->
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
 </head>
+
 <body>
-<body oncontextmenu="return false;">
 
 <!-- 顶部首屏视觉区 -->
-<section class="hero">
+<section class="hero" id="hero">
     <img src="images/top-bg.png" class="hero-bg" alt="">
     <img src="images/center.png" class="hero-center" alt="">
 </section>
@@ -37,6 +46,13 @@
     </main>
 </div>
 
-<script src="css/script.js"></script>
+<!-- ⭐ Hero 动画 JS（直接内联，不走外部） -->
+<script>
+    window.addEventListener('load', function () {
+        const hero = document.getElementById('hero');
+        hero.classList.add('show');
+    });
+</script>
+
 </body>
 </html>
