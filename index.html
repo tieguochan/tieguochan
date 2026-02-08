@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>铁锅铲</title>
+    <link rel="icon" href="images/icon/favicon.png" type="image/png">
 
     <!-- 主样式 -->
     <link rel="stylesheet" href="css/style.css">
@@ -14,94 +15,191 @@
         });
     </script>
 </head>
-
+<button id="backToTop" class="back-to-top">↑</button>
 <body>
 
-<!-- 顶部首屏视觉区 -->
+<!-- Hero -->
 <section class="hero" id="hero">
     <img src="images/hero/top-bg.png" class="hero-bg" alt="">
     <img src="images/hero/center.png" class="hero-center" alt="">
 </section>
 
 <!-- 下方内容区 -->
-<div style="background-color:#111; display:flex; justify-content:center; padding:48px 0;">
-    <!-- 容器：居中显示右侧内容 -->
-    <div style="width:100%; max-width:1100px; display:flex; gap:32px;">
+<div class="page-wrap">
+    <div class="page-container">
+
         <!-- 左侧栏 -->
         <aside class="sidebar">
+
             <img src="images/avatar.png" class="avatar" alt="头像">
 
-            <!-- 名字 -->
-            <div style="text-align:center; font-size:18px; font-weight:600; color:#fff; margin-bottom:12px;">
-                铁锅铲
-            </div>
+            <div class="sidebar-name">铁锅铲</div>
 
-            <!-- 社交按钮 -->
-            <div class="social-links" style="display:flex;justify-content:center;gap:14px;margin-bottom:32px;">
+            <div class="social-links">
                 <a href="https://x.com/tieguochan" target="_blank">
-                    <img src="images/icon/icon-x.png" alt="X" width="28">
+                    <img src="images/icon/icon-x.png" width="28">
                 </a>
                 <a href="https://www.xiaohongshu.com/user/profile/649bfb75000000000a023028" target="_blank">
-                    <img src="images/icon/icon-xhs.png" alt="小红书" width="28">
+                    <img src="images/icon/icon-xhs.png" width="28">
                 </a>
                 <a href="https://weibo.com/u/7780085960" target="_blank">
-                    <img src="images/icon/icon-weibo.png" alt="微博" width="28">
+                    <img src="images/icon/icon-weibo.png" width="28">
                 </a>
                 <a href="https://www.mihuashi.com/profiles/293575" target="_blank">
-                    <img src="images/icon/icon-mhs.png" alt="米画师" width="28">
+                    <img src="images/icon/icon-mhs.png" width="28">
                 </a>
             </div>
 
             <!-- 菜单 -->
-            <nav class="menu" style="display:flex; flex-direction:column; align-items:center;">
-                <a href="#hero" class="menu-item active">首页</a>
-                <a href="#works" class="menu-item">作品</a>
-                <a href="#about" class="menu-item">关于我</a>
-                <a href="#contact" class="menu-item">联系</a>
+            <nav class="menu menu-center">
+                <div class="menu-item submenu-container">
+                    <span id="works-toggle" class="submenu-toggle">
+                        <span>作品</span>
+                        <span class="submenu-arrow"></span>
+                    </span>
+                    <div class="submenu">
+                        <a href="#17" class="submenu-item">主明</a>
+                        <a href="#21" class="submenu-item">舟</a>
+                    </div>
+                </div>
             </nav>
+
+
+
         </aside>
 
-        <!-- 右侧内容（作品展示） -->
-        <main class="content" style="flex:1; display:flex; flex-direction:column; align-items:center; gap:32px;">
-            <section class="section" id="works" style="width:100%; display:flex; flex-direction:column; align-items:center; gap:40px;">
-                <h2 style="text-align:center; color:#fff;"></h2>
-                <div class="works" style="display:flex; flex-direction:column; gap:40px; width:100%; align-items:center;">
-                    <!-- 缩略图，一行一幅 + 分割线 -->
-                    <div style="width:100%; max-width:700px; text-align:center;">
+        <!-- 右侧内容 -->
+        <main class="content content-center">
+
+            <!-- 第一块作品 -->
+            <section class="works-block">
+                <div class="works">
+
+                    <div class="work-item" id="17">
                         <a href="https://www.xiaohongshu.com/explore/687a61870000000011001c50?xsec_token=ABICFfRQtrktEBZWDe6O2Ca3DmQp5zSyDUi2Qprm9rs1w=&xsec_source=pc_user" target="_blank">
-                            <img src="images/show/thumb1.jpg" alt="作品 1" style="width:100%; height:auto; object-fit:cover; border-radius:8px;">
+                            <img src="images/show/17.jpg" alt="作品7">
                         </a>
-                        <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:32px 0;">
+                        <div class="work-time">2025.07.18</div>
+                        <hr>
                     </div>
 
-                    <div style="width:100%; max-width:700px; text-align:center;">
+                    <div class="work-item" id="16">
                         <a href="https://www.xiaohongshu.com/explore/6829d9fb0000000023014c00?xsec_token=ABU7P5UfscWV6T8McAwEYSoDzl4LnyXhY9UbPJ83CVSAI=&xsec_source=pc_user" target="_blank">
-                            <img src="images/show/thumb2.jpg" alt="作品 2" style="width:100%; height:auto; object-fit:cover; border-radius:8px;">
+                            <img src="images/show/16.jpg" alt="作品6">
                         </a>
-                        <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:32px 0;">
+                        <div class="work-time">2025.05.18</div>
+                        <hr>
+                    </div>
+
+                    <div class="work-item" id="15">
+                        <a href="https://www.xiaohongshu.com/explore/6829d9fb0000000023014c00?xsec_token=ABU7P5UfscWV6T8McAwEYSoDzl4LnyXhY9UbPJ83CVSAI=&xsec_source=pc_user" target="_blank">
+                            <img src="images/show/15.jpg" alt="作品5">
+                        </a>
+                        <div class="work-time">2024.09.06</div>
+                        <hr>
+                    </div>
+
+                    <div class="work-item" id="14">
+                        <a href="https://x.com/tieguochan/status/1776193156108943748" target="_blank">
+                            <img src="images/show/14.jpg" alt="作品4">
+                        </a>
+                        <div class="work-time">2024.04.05</div>
+                        <hr>
+                    </div>
+
+                    <div class="work-item" id="13">
+                        <a href="https://x.com/tieguochan/status/1760340808992252241" target="_blank">
+                            <img src="images/show/13.jpg" alt="作品3">
+                        </a>
+                        <div class="work-time">2024.02.22</div>
+                        <hr>
+                    </div>
+
+                    <div class="work-item" id="12">
+                        <a href="https://x.com/tieguochan/status/1794704752254894489" target="_blank">
+                            <img src="images/show/12.jpg" alt="作品2">
+                        </a>
+                        <div class="work-time">2024.05.26</div>
+                        <hr>
+                    </div>
+
+                    <div class="work-item" id="11">
+                        <a href="https://x.com/tieguochan/status/1765803869546910021" target="_blank">
+                            <img src="images/show/11.jpg" alt="作品1">
+                        </a>
+                        <div class="work-time">2024.03.08</div>
+                        <hr>
                     </div>
                 </div>
             </section>
+
+            <!-- 第二块作品 -->
+            <section class="works-block">
+                <div class="works">
+                    <div class="work-item" id="21">
+                        <a href="https://www.xiaohongshu.com/explore/695fe7e7000000000a03f70c?xsec_token=ABRxYyhPFoTvPQljtsw-J4UgfZ_wKILPhS6jbNw3wHE8M=&xsec_source=pc_user" target="_blank">
+                            <img src="images/show/21.jpg" alt="作品1">
+                        </a>
+                        <div class="work-time">2026.01.09</div>
+                        <hr>
+                    </div>
+                </div>
+            </section>
+
         </main>
+
     </div>
 </div>
 
-<!-- ⭐ Hero 动画 JS（直接内联，不走外部） -->
+<!-- JS -->
 <script>
-    window.addEventListener('load', function () {
-        const hero = document.getElementById('hero');
-        hero.classList.add('show');
+    window.addEventListener('load', () => {
+        document.getElementById('hero').classList.add('show');
     });
 
-    // 菜单滚动高亮
+    const worksToggle = document.getElementById('works-toggle');
+    const submenu = document.querySelector('.submenu');
+
+    worksToggle.addEventListener('click', () => {
+        submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', () => {
             menuItems.forEach(i => i.classList.remove('active'));
-            this.classList.add('active');
+            item.classList.add('active');
         });
     });
 </script>
+<script>
+    const toggle = document.getElementById('works-toggle');
+    const container = toggle.closest('.submenu-container');
+
+    toggle.addEventListener('click', () => {
+        container.classList.toggle('open');
+    });
+</script>
+<script>
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+
 
 </body>
 </html>
