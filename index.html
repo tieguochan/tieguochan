@@ -19,50 +19,71 @@
 
 <!-- 顶部首屏视觉区 -->
 <section class="hero" id="hero">
-    <img src="images/top-bg.png" class="hero-bg" alt="">
-    <img src="images/center.png" class="hero-center" alt="">
+    <img src="images/hero/top-bg.png" class="hero-bg" alt="">
+    <img src="images/hero/center.png" class="hero-center" alt="">
 </section>
 
 <!-- 下方内容区 -->
-<div class="layout">
-    <!-- 左侧栏 -->
-    <aside class="sidebar">
-        <img src="images/avatar.png" class="avatar" alt="头像">
+<div style="background-color:#111; display:flex; justify-content:center; padding:48px 0;">
+    <!-- 容器：居中显示右侧内容 -->
+    <div style="width:100%; max-width:1100px; display:flex; gap:32px;">
+        <!-- 左侧栏 -->
+        <aside class="sidebar">
+            <img src="images/avatar.png" class="avatar" alt="头像">
 
-        <div style="text-align:center; font-size:18px; font-weight:600; color:#fff; margin-bottom:12px;">
-            铁锅铲
-        </div>
-        <!-- ⭐ 社交按钮区（新增，仅此一处） -->
-        <div class="social-links" style="display:flex;justify-content:center;gap:14px;margin-bottom:32px;">
-            <a href="https://x.com/tieguochan" target="_blank">
-                <img src="images/icon-x.png" alt="X" width="28">
-            </a>
-            <a href="https://www.xiaohongshu.com/user/profile/649bfb75000000000a023028" target="_blank">
-                <img src="images/icon-xhs.png" alt="小红书" width="28">
-            </a>
-            <a href="https://weibo.com/u/7780085960" target="_blank">
-                <img src="images/icon-weibo.png" alt="微博" width="28">
-            </a>
-            <a href="https://www.mihuashi.com/profiles/293575" target="_blank">
-                <img src="images/icon-mhs.png" alt="米画师" width="28">
-            </a>
-        </div>
+            <!-- 名字 -->
+            <div style="text-align:center; font-size:18px; font-weight:600; color:#fff; margin-bottom:12px;">
+                铁锅铲
+            </div>
 
-        <nav class="menu">
-            <a href="#" class="menu-item active">首页</a>
-            <a href="#" class="menu-item">作品</a>
-            <a href="#" class="menu-item">关于我</a>
-            <a href="#" class="menu-item">联系</a>
-        </nav>
-    </aside>
+            <!-- 社交按钮 -->
+            <div class="social-links" style="display:flex;justify-content:center;gap:14px;margin-bottom:32px;">
+                <a href="https://x.com/tieguochan" target="_blank">
+                    <img src="images/icon/icon-x.png" alt="X" width="28">
+                </a>
+                <a href="https://www.xiaohongshu.com/user/profile/649bfb75000000000a023028" target="_blank">
+                    <img src="images/icon/icon-xhs.png" alt="小红书" width="28">
+                </a>
+                <a href="https://weibo.com/u/7780085960" target="_blank">
+                    <img src="images/icon/icon-weibo.png" alt="微博" width="28">
+                </a>
+                <a href="https://www.mihuashi.com/profiles/293575" target="_blank">
+                    <img src="images/icon/icon-mhs.png" alt="米画师" width="28">
+                </a>
+            </div>
 
-    <!-- 右侧内容 -->
-    <main class="content">
-        <section class="section">
-            <h2>这里是标题</h2>
-            <p>这里是内容说明，之后你可以自己替换。</p>
-        </section>
-    </main>
+            <!-- 菜单 -->
+            <nav class="menu" style="display:flex; flex-direction:column; align-items:center;">
+                <a href="#hero" class="menu-item active">首页</a>
+                <a href="#works" class="menu-item">作品</a>
+                <a href="#about" class="menu-item">关于我</a>
+                <a href="#contact" class="menu-item">联系</a>
+            </nav>
+        </aside>
+
+        <!-- 右侧内容（作品展示） -->
+        <main class="content" style="flex:1; display:flex; flex-direction:column; align-items:center; gap:32px;">
+            <section class="section" id="works" style="width:100%; display:flex; flex-direction:column; align-items:center; gap:40px;">
+                <h2 style="text-align:center; color:#fff;"></h2>
+                <div class="works" style="display:flex; flex-direction:column; gap:40px; width:100%; align-items:center;">
+                    <!-- 缩略图，一行一幅 + 分割线 -->
+                    <div style="width:100%; max-width:700px; text-align:center;">
+                        <a href="https://www.xiaohongshu.com/explore/687a61870000000011001c50?xsec_token=ABICFfRQtrktEBZWDe6O2Ca3DmQp5zSyDUi2Qprm9rs1w=&xsec_source=pc_user" target="_blank">
+                            <img src="images/show/thumb1.jpg" alt="作品 1" style="width:100%; height:auto; object-fit:cover; border-radius:8px;">
+                        </a>
+                        <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:32px 0;">
+                    </div>
+
+                    <div style="width:100%; max-width:700px; text-align:center;">
+                        <a href="https://www.xiaohongshu.com/explore/6829d9fb0000000023014c00?xsec_token=ABU7P5UfscWV6T8McAwEYSoDzl4LnyXhY9UbPJ83CVSAI=&xsec_source=pc_user" target="_blank">
+                            <img src="images/show/thumb2.jpg" alt="作品 2" style="width:100%; height:auto; object-fit:cover; border-radius:8px;">
+                        </a>
+                        <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:32px 0;">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </div>
 
 <!-- ⭐ Hero 动画 JS（直接内联，不走外部） -->
@@ -70,6 +91,15 @@
     window.addEventListener('load', function () {
         const hero = document.getElementById('hero');
         hero.classList.add('show');
+    });
+
+    // 菜单滚动高亮
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            menuItems.forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+        });
     });
 </script>
 
