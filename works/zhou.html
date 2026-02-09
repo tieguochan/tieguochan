@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>铁锅铲 · 舟</title>
+    <link rel="icon" href="../images/icon/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<button id="backToTop" class="back-to-top"></button>
+
+<section class="hero" id="hero">
+    <img src="../images/hero/top-bg.png" class="hero-bg" alt="">
+    <img src="../images/hero/center.png" class="hero-center" alt="">
+</section>
+
+<div class="page-wrap">
+    <div class="page-container">
+
+        <aside class="sidebar">
+            <img src="../images/avatar.png" class="avatar">
+            <div class="sidebar-name">铁锅铲</div>
+
+            <nav class="menu menu-center">
+                <!-- 首页 -->
+                <a href="../index.html" class="menu-item">
+                    首页
+                </a>
+                <div class="menu-item submenu-container open">
+                    <span class="submenu-toggle">
+                        <span>作品</span>
+                        <span class="submenu-arrow"></span>
+                    </span>
+                    <div class="submenu">
+                        <a href="zhumin.html" class="submenu-item">主明</a>
+                        <a href="zhou.html" class="submenu-item">舟</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="content content-center">
+
+            <section class="works-block">
+                <div class="works">
+
+                    <div class="work-item">
+                        <a href="https://www.xiaohongshu.com/explore/695fe7e7000000000a03f70c" target="_blank">
+                            <img src="../images/show/21.jpg">
+                        </a>
+                        <div class="work-time">2026.01.09</div>
+                        <hr>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <p>© 铁锅铲 All Rights Reserved.</p>
+    <p>
+        本站所有插画、漫画<br>
+        未经许可禁止商用、二次分发或用于 AI 训练。
+    </p>
+</footer>
+
+<script>
+    /* Hero 动画 */
+    window.addEventListener('load', () => {
+        document.getElementById('hero').classList.add('show');
+    });
+
+    /* 作品子菜单展开 / 收起 */
+    const toggle = document.querySelector('.submenu-toggle');
+    const container = toggle.closest('.submenu-container');
+
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        container.classList.toggle('open');
+    });
+
+    /* 返回顶部 */
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 200);
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+</html>
