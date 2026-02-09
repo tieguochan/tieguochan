@@ -117,6 +117,11 @@ body {
     border-right:1px solid rgba(255,255,255,0.08);
 }
 
+.sidebar {
+    height: fit-content;
+    align-self: flex-start;
+}
+
 .avatar {
     width:120px;
     height:120px;
